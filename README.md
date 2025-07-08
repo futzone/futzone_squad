@@ -7,12 +7,18 @@
 ### ⚽ **Loyiha haqida**
 
 **Futzone Squad Maker** — Flutter asosida yaratilgan, futbol ishqibozlari va murabbiylar uchun maxsus dastur.
-✅ Tez va qulay tarzda o‘yinchilar ro‘yxatini yaratish
-✅ O‘yinchilarga pozitsiya, reyting, rasm va boshqa ma’lumotlar berish
-✅ 4–11 o‘yinchilik real taktik sxemalar bilan jamoani shakllantirish
-✅ Har bir jamoa uchun o‘nlab professional sxemalar
-✅ Rasm fonini local (offline) kesish (background remove) bilan yengil saqlash
-✅ Hive orqali ma’lumotlarni offline saqlash
+
+* ✅ Tez va qulay tarzda o‘yinchilar ro‘yxatini yaratish
+
+* ✅ O‘yinchilarga pozitsiya, reyting, rasm va boshqa ma’lumotlar berish
+
+* ✅ 4–11 o‘yinchilik real taktik sxemalar bilan jamoani shakllantirish
+
+* ✅ Har bir jamoa uchun o‘nlab professional sxemalar
+
+* ✅ Rasm fonini local (offline) kesish (background remove) bilan yengil saqlash
+
+* ✅ Hive orqali ma’lumotlarni offline saqlash
 
 ---
 
@@ -45,15 +51,6 @@ cd futzone_squad
 flutter pub get
 flutter run
 ```
-
----
-
-### 📱 **Ekran rasmlari**
-
-![Screenshot1](assets/screenshots/squad_maker_1.png)
-![Screenshot2](assets/screenshots/squad_maker_2.png)
-
----
 
 ### 🧩 **Kelajak rejalari**
 
