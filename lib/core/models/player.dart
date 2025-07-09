@@ -68,4 +68,18 @@ class Player {
       'image': image,
     };
   }
+
+  static Player defaultPlayer(int number) => Player(
+    id: '',
+    fullname: '',
+    position: '',
+    number: number,
+    pac: 0,
+    sho: 0,
+    pas: 0,
+    dri: 0,
+    def: 0,
+    phy: 0,
+    score: 0,
+  );
 }

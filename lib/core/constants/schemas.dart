@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 class Schemas {
   final Map<String, Map<String, List<int>>> schemas = {
     "4": {
@@ -81,5 +83,31 @@ class Schemas {
 
   Map<String, List<int>> getSchemas(String count) {
     return schemas[count] ?? {};
+  }
+
+  List<Offset> generateOffsets(String count, double width, double height) {
+    final List<int> formation = getSchemas(count).values.first;
+    if (formation.isEmpty) return [];
+
+    List<Offset> offsets = [];
+    double rowHeight = height / (formation.length + 1);
+
+    const double playerWidth = 80;
+    const double spaceBetween = 10;
+
+    for (int i = 0; i < formation.length; i++) {
+      int playersInRow = formation[i];
+      double y = height - rowHeight * (i + 1);
+
+      double totalRowWidth = playersInRow * playerWidth + (playersInRow - 1) * spaceBetween;
+      double startX = (width - totalRowWidth) / 2;
+
+      for (int j = 0; j < playersInRow; j++) {
+        double x = startX + j * (playerWidth + spaceBetween);
+        offsets.add(Offset(x, y - 60));
+      }
+    }
+
+    return offsets;
   }
 }

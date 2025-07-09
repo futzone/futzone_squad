@@ -9,6 +9,8 @@ import 'package:futzone_squad/ui/widgets/app_text_field.dart';
 import 'package:futzone_squad/ui/widgets/app_theme_builder.dart';
 import 'package:icons_plus/icons_plus.dart';
 
+import '../screens/scheme_screen.dart';
+
 class TeamPage extends StatefulWidget {
   const TeamPage({super.key});
 
@@ -49,7 +51,13 @@ class _TeamPageState extends State<TeamPage> {
 
                 Text("Tarkib tuzish", style: TextStyle(fontSize: 20, fontFamily: boldFamily)),
                 8.h,
-                SizedBox(width: 480, height: 600, child: Image.asset("assets/images/img_2.png")),
+                if (_cardType != null)
+                  SchemeScreen(
+                    cardType: _cardType!,
+                    theme: theme,
+                    count: _selectedCount ?? '',
+                    scheme: _selectedScheme ?? '',
+                  ),
                 20.h,
               ],
             ),
