@@ -40,9 +40,9 @@ class MainPage extends StatelessWidget {
                           child: Column(
                             spacing: 12,
                             children: [
-                              Image.asset("assets/images/full.jpg", height: 200),
+                              Image.asset("assets/images/img_3.png", height: 200),
                               Text(
-                                "To'liq tarkib tuzish",
+                                "Player FIFA CARD",
                                 style: TextStyle(
                                   fontSize: 16,
                                   fontFamily: mediumFamily,
@@ -70,7 +70,7 @@ class MainPage extends StatelessWidget {
                                 width: double.infinity,
                               ),
                               Text(
-                                "1 ta jamoa tuzish",
+                                "Jamoa tuzish",
                                 style: TextStyle(
                                   fontSize: 16,
                                   fontFamily: mediumFamily,
@@ -134,14 +134,14 @@ class MainPage extends StatelessWidget {
                           children: [
                             Expanded(
                               child: Image.asset(
-                                "assets/images/full.jpg",
+                                "assets/images/img_3.png",
                                 height: double.infinity,
                                 fit: BoxFit.cover,
                                 width: double.infinity,
                               ),
                             ),
                             Text(
-                              "To'liq tarkib tuzish",
+                              "Player FIFA CARD",
                               style: TextStyle(
                                 fontSize: 16,
                                 fontFamily: mediumFamily,
@@ -156,7 +156,7 @@ class MainPage extends StatelessWidget {
                         padding: EdgeInsets.only(top: 48, bottom: 48, left: 40, right: 40),
                         color: theme.accentColor,
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-                        onPressed:onPressedTeam,
+                        onPressed: onPressedTeam,
                         child: Column(
                           spacing: 12,
                           children: [
@@ -169,7 +169,7 @@ class MainPage extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              "1 ta jamoa tuzish",
+                              "Jamoa tuzish",
                               style: TextStyle(
                                 fontSize: 16,
                                 fontFamily: mediumFamily,
@@ -230,13 +230,13 @@ class MainPage extends StatelessWidget {
                             spacing: 12,
                             children: [
                               Image.asset(
-                                "assets/images/full.jpg",
+                                "assets/images/img_3.png",
                                 height: 200,
                                 width: double.infinity,
                                 fit: BoxFit.cover,
                               ),
                               Text(
-                                "To'liq tarkib tuzish",
+                                "Player FIFA CARD",
                                 style: TextStyle(
                                   fontSize: 16,
                                   fontFamily: mediumFamily,
@@ -262,7 +262,7 @@ class MainPage extends StatelessWidget {
                                 fit: BoxFit.cover,
                               ),
                               Text(
-                                "1 ta jamoa tuzish",
+                                "Jamoa tuzish",
                                 style: TextStyle(
                                   fontSize: 16,
                                   fontFamily: mediumFamily,

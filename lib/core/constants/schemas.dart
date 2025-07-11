@@ -13,6 +13,8 @@ class Schemas {
       "2-2": [2, 2],
       "1-3": [1, 3],
       "3-1": [3, 1],
+      "1-1-2": [1, 1, 2],
+      "2-1-1": [2, 1, 1],
     },
     "6": {
       // 1 GK + 5
@@ -76,8 +78,9 @@ class Schemas {
       "4-2-4": [4, 2, 4],
       "4-1-5": [4, 1, 5],
       "3-2-5": [3, 2, 5],
-      "1-2-7": [1, 2, 7],
-      "2-2-6": [2, 2, 6],
+      "5-5": [5, 5],
+      // "1-2-7": [1, 2, 7],
+      // "2-2-6": [2, 2, 6],
     },
   };
 
@@ -85,8 +88,8 @@ class Schemas {
     return schemas[count] ?? {};
   }
 
-  List<Offset> generateOffsets(String count, double width, double height) {
-    final List<int> formation = getSchemas(count).values.first;
+  List<Offset> generateOffsets(String count, String schema, double width, double height) {
+    final List<int> formation = getSchemas(count)[schema] ?? [];
     if (formation.isEmpty) return [];
 
     List<Offset> offsets = [];
@@ -99,11 +102,11 @@ class Schemas {
       int playersInRow = formation[i];
       double y = height - rowHeight * (i + 1);
 
-      double totalRowWidth = playersInRow * playerWidth + (playersInRow - 1) * spaceBetween;
+      double totalRowWidth = playersInRow * playerWidth + (playersInRow - 1) * (playersInRow > 4 ? 0 : spaceBetween);
       double startX = (width - totalRowWidth) / 2;
 
       for (int j = 0; j < playersInRow; j++) {
-        double x = startX + j * (playerWidth + spaceBetween);
+        double x = startX + j * (playerWidth + (playersInRow > 4 ? 0 : spaceBetween));
         offsets.add(Offset(x, y - 60));
       }
     }
