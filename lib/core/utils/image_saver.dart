@@ -1,5 +1,6 @@
 import 'dart:typed_data';
+import 'save_image_web.dart' as saw;
 
 Future<void> savePng(Uint8List pngBytes, String fileName) async {
-  throw UnsupportedError('Saving PNG is not supported on this platform');
+  await saw.savePng(pngBytes, fileName);
 }
