@@ -22,8 +22,8 @@ class PlayersController {
   Future<String?> _saveImage(String id, image) async {
     // _imageDatabase.deleteImage(id);
 
-    final compressed = compressImage(image);
-    await _imageDatabase.saveImage(id, compressed);
+    // final compressed = compressImage(image);
+    await _imageDatabase.saveImage(id, image);
     return id;
   }
 

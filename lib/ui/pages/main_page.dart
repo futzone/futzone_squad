@@ -6,6 +6,9 @@ import 'package:futzone_squad/core/extensions/double.dart';
 import 'package:futzone_squad/ui/pages/players_page.dart';
 import 'package:futzone_squad/ui/pages/team_page.dart';
 import 'package:futzone_squad/ui/widgets/app_theme_builder.dart';
+import 'package:url_launcher/url_launcher_string.dart';
+
+import '../screens/fifa_card_screen.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({super.key});
@@ -14,11 +17,23 @@ class MainPage extends StatelessWidget {
   Widget build(BuildContext context) {
     void onPressedPlayers() => AppRouter.go(context, PlayersPage());
     void onPressedTeam() => AppRouter.go(context, TeamPage());
+    void onPressedCard() => AppRouter.go(context, FifaCardScreen());
 
     return AppThemeBuilder(
       builder: (theme) {
         return Scaffold(
-          appBar: AppBar(title: Text("Futzone Squad Maker", style: TextStyle(fontFamily: boldFamily))),
+          appBar: AppBar(
+            title: Text("Futzone Squad Maker", style: TextStyle(fontFamily: boldFamily)),
+            actions: [
+              IconButton(
+                onPressed: () async {
+                  await launchUrlString('https://t.me/qahorovz');
+                },
+                icon: Icon(Icons.telegram_outlined),
+              ),
+              8.w,
+            ],
+          ),
           body: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
@@ -36,11 +51,11 @@ class MainPage extends StatelessWidget {
                           padding: EdgeInsets.only(top: 48, bottom: 48, left: 40, right: 40),
                           color: theme.accentColor,
                           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-                          onPressed: () {},
+                          onPressed: onPressedCard,
                           child: Column(
                             spacing: 12,
                             children: [
-                              Image.asset("assets/images/img_3.png", height: 200),
+                              Image.asset("assets/images/img.png", height: 200),
                               Text(
                                 "Player FIFA CARD",
                                 style: TextStyle(
@@ -64,7 +79,7 @@ class MainPage extends StatelessWidget {
                             spacing: 12,
                             children: [
                               Image.asset(
-                                "assets/images/half.jpg",
+                                "assets/images/soccer field background 1003.jpg",
                                 height: 200,
                                 fit: BoxFit.cover,
                                 width: double.infinity,
@@ -92,7 +107,7 @@ class MainPage extends StatelessWidget {
                             spacing: 12,
                             children: [
                               Image.asset(
-                                "assets/images/img.png",
+                                "assets/images/img_1.png",
                                 height: 200,
                                 width: double.infinity,
                                 fit: BoxFit.cover,
@@ -128,13 +143,13 @@ class MainPage extends StatelessWidget {
                         padding: EdgeInsets.only(top: 48, bottom: 48, left: 40, right: 40),
                         color: theme.accentColor,
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-                        onPressed: () {},
+                        onPressed: onPressedCard,
                         child: Column(
                           spacing: 12,
                           children: [
                             Expanded(
                               child: Image.asset(
-                                "assets/images/img_3.png",
+                                "assets/images/img.png",
                                 height: double.infinity,
                                 fit: BoxFit.cover,
                                 width: double.infinity,
@@ -162,7 +177,7 @@ class MainPage extends StatelessWidget {
                           children: [
                             Expanded(
                               child: Image.asset(
-                                "assets/images/half.jpg",
+                                "assets/images/soccer field background 1003.jpg",
                                 height: double.infinity,
                                 fit: BoxFit.cover,
                                 width: double.infinity,
@@ -190,7 +205,7 @@ class MainPage extends StatelessWidget {
                           children: [
                             Expanded(
                               child: Image.asset(
-                                "assets/images/img.png",
+                                "assets/images/img_1.png",
                                 height: double.infinity,
                                 fit: BoxFit.cover,
                                 width: double.infinity,
@@ -225,12 +240,12 @@ class MainPage extends StatelessWidget {
                           padding: EdgeInsets.only(top: 48, bottom: 48, left: 40, right: 40),
                           color: theme.accentColor,
                           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-                          onPressed: () {},
+                          onPressed: onPressedCard,
                           child: Column(
                             spacing: 12,
                             children: [
                               Image.asset(
-                                "assets/images/img_3.png",
+                                "assets/images/img.png",
                                 height: 200,
                                 width: double.infinity,
                                 fit: BoxFit.cover,
@@ -256,7 +271,7 @@ class MainPage extends StatelessWidget {
                             spacing: 12,
                             children: [
                               Image.asset(
-                                "assets/images/half.jpg",
+                                "assets/images/soccer field background 1003.jpg",
                                 height: 200,
                                 width: double.infinity,
                                 fit: BoxFit.cover,
@@ -282,7 +297,7 @@ class MainPage extends StatelessWidget {
                             spacing: 12,
                             children: [
                               Image.asset(
-                                "assets/images/img.png",
+                                "assets/images/img_1.png",
                                 height: 200,
                                 width: double.infinity,
                                 fit: BoxFit.cover,
